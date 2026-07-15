@@ -1,0 +1,59 @@
+# Workspace de Treinamento Vue 3
+
+Este repositorio registra um treinamento completo de Vue 3, os playgrounds usados
+nas aulas e a descoberta do **TechEventHub**, projeto final que sera implementado na
+proxima etapa.
+
+O material foi produzido para um desenvolvedor com experiencia em TypeScript,
+React, Angular e .NET. O guia enfatiza modelo mental, diferencas entre frameworks,
+armadilhas e praticas profissionais.
+
+## Documentacao
+
+- [Guia complementar de Vue](./guia-vue/README.md): consolidacao dos 14 modulos,
+  duvidas discutidas e exemplos do playground.
+- [PRODUCT.md](./PRODUCT.md): visao do produto, personas, escopo e modelo inicial.
+- [ROADMAP.md](./ROADMAP.md): etapas de implementacao e estado atual.
+- [DECISIONS.md](./DECISIONS.md): decisoes de produto e arquitetura ja tomadas.
+- [USE_CASES.md](./USE_CASES.md): casos de uso e criterios de aceite.
+- [NAVIGATION.md](./NAVIGATION.md): layouts, rotas e regras de acesso.
+- [DOMAIN.md](./DOMAIN.md): entidades, relacionamentos e regras de negocio.
+- [MVP_ACCEPTANCE.md](./MVP_ACCEPTANCE.md): criterios para considerar o MVP pronto.
+- [AI_CONTEXT.md](./AI_CONTEXT.md): contexto curto para continuar o trabalho em
+  outro chat com uma IA.
+
+## Conteudo do Repositorio
+
+- `guia-vue/`: guia complementar dos 14 modulos e SSR/Nuxt.
+- `projeto-1/`: playground principal, com Router, Pinia, formularios, API fake,
+  recursos avancados, arquitetura e testes.
+- `test1/`: primeiro playground, com fundamentos, componentes, reatividade e
+  provide/inject.
+- documentos de produto na raiz: estado atual da descoberta do TechEventHub.
+
+A aplicacao final ainda nao foi criada. Seu diretorio sera definido na etapa de
+configuracao inicial.
+
+## Organizacao do Workspace
+
+- `guia-vue/`: material de consulta produzido durante o treinamento.
+- `projeto-1/`: playground principal e fonte dos exemplos mais avancados.
+- `test1/`: primeiro playground, com fundamentos, componentes e reatividade.
+- arquivos `PRODUCT.md`, `DOMAIN.md` e relacionados: descoberta do TechEventHub.
+
+## Executando os Playgrounds
+
+```bash
+cd test1
+npm install
+npm run dev
+```
+
+```bash
+cd projeto-1
+npm install
+npm run dev:full
+```
+
+No `projeto-1`, o Vite e o `json-server` sao iniciados em paralelo pelo script
+`dev:full`.

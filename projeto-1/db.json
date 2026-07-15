@@ -1,0 +1,93 @@
+{
+  "customers": [
+    {
+      "id": "2",
+      "name": "Bruno Costa",
+      "email": "bruno.costa@example.com",
+      "role": "user",
+      "creditLimit": 1800,
+      "isActive": true
+    },
+    {
+      "id": "4",
+      "name": "Diego Rocha",
+      "email": "diego.rocha@example.com",
+      "role": "admin",
+      "creditLimit": 7200,
+      "isActive": true
+    },
+    {
+      "id": "5",
+      "name": "Elisa Martins",
+      "email": "elisa.martins@example.com",
+      "role": "user",
+      "creditLimit": 1200,
+      "isActive": true
+    },
+    {
+      "id": "6",
+      "name": "Felipe Almeida",
+      "email": "felipe.almeida@example.com",
+      "role": "user",
+      "creditLimit": 3400,
+      "isActive": false
+    },
+    {
+      "id": "7",
+      "name": "Gabriela Nunes",
+      "email": "gabriela.nunes@example.com",
+      "role": "admin",
+      "creditLimit": 6100,
+      "isActive": true
+    },
+    {
+      "id": "8",
+      "name": "Henrique Lopes",
+      "email": "henrique.lopes@example.com",
+      "role": "user",
+      "creditLimit": 900,
+      "isActive": true
+    },
+    {
+      "id": "9",
+      "name": "Isabela Teixeira",
+      "email": "isabela.teixeira@example.com",
+      "role": "user",
+      "creditLimit": 4100,
+      "isActive": true
+    },
+    {
+      "id": "10",
+      "name": "Joao Pereira",
+      "email": "joao.pereira@example.com",
+      "role": "user",
+      "creditLimit": 2000,
+      "isActive": false
+    },
+    {
+      "id": "12",
+      "name": "Marcelo Dias",
+      "email": "marcelo.dias@example.com",
+      "role": "user",
+      "creditLimit": 1500,
+      "isActive": true
+    },
+    {
+      "id": "13",
+      "name": "Natalia Ribeiro",
+      "email": "natalia.ribeiro@example.com",
+      "role": "user",
+      "creditLimit": 2750,
+      "isActive": true
+    },
+    {
+      "id": "14",
+      "name": "Otavio Barbosa",
+      "email": "otavio.barbosa@example.com",
+      "role": "user",
+      "creditLimit": 3600,
+      "isActive": false
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
