@@ -14,6 +14,7 @@ useBreadcrumbs();
     <RouterLink :to="{ name: 'root' }"><strong>Projeto 1 - Vue Router</strong></RouterLink>
 
     <nav class="app-nav">
+      <RouterLink :to="{ name: 'examples-overview' }">Exemplos</RouterLink>
       <RouterLink :to="{ name: 'dashboard' }">Dashboard</RouterLink>
       <RouterLink to="/users">Usuarios</RouterLink>
       <RouterLink to="/customers">Clientes</RouterLink>

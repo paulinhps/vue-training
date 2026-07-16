@@ -120,8 +120,8 @@ persistencia pode viver em `shared`, desde que ja exista reutilizacao real.
 
 ## Exemplos do Workspace
 
-- [`test1/src/composables/useClock.ts`](../test1/src/composables/useClock.ts)
-- [`test1/src/components/Clock.vue`](../test1/src/components/Clock.vue)
+- [`projeto-1/src/features/examples/composables/useClock.ts`](../projeto-1/src/features/examples/composables/useClock.ts)
+- [`projeto-1/src/features/examples/composables/LocalClock.vue`](../projeto-1/src/features/examples/composables/LocalClock.vue)
 - [`projeto-1/src/features/customers/useCustomersList.ts`](../projeto-1/src/features/customers/useCustomersList.ts)
 - [`projeto-1/src/features/customers/useCustomerCreateForm.ts`](../projeto-1/src/features/customers/useCustomerCreateForm.ts)
 

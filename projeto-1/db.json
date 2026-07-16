@@ -89,5 +89,40 @@
       "isActive": false
     }
   ],
+  "addresses": [
+    {
+      "id": "01000000",
+      "cep": "01000-000",
+      "logradouro": "Praca da Se",
+      "complemento": "lado impar",
+      "bairro": "Se",
+      "localidade": "Sao Paulo",
+      "uf": "SP",
+      "ibge": "3550308",
+      "ddd": "11"
+    },
+    {
+      "id": "20000000",
+      "cep": "20000-000",
+      "logradouro": "Praca Pio X",
+      "complemento": "",
+      "bairro": "Centro",
+      "localidade": "Rio de Janeiro",
+      "uf": "RJ",
+      "ibge": "3304557",
+      "ddd": "21"
+    },
+    {
+      "id": "30100000",
+      "cep": "30100-000",
+      "logradouro": "Avenida Afonso Pena",
+      "complemento": "",
+      "bairro": "Centro",
+      "localidade": "Belo Horizonte",
+      "uf": "MG",
+      "ibge": "3106200",
+      "ddd": "31"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

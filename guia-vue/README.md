@@ -45,7 +45,7 @@ Cada modulo contem:
 - sintaxe essencial;
 - duvidas levantadas durante o treinamento;
 - armadilhas e praticas profissionais;
-- links para implementacoes reais em `test1` e `projeto-1`.
+- links para implementacoes reais no playground `projeto-1`.
 
 Os exemplos sao material de estudo, nao uma biblioteca pronta para producao. Ao
 reutiliza-los, preserve a ideia e reavalie requisitos, acessibilidade e tratamento

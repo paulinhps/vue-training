@@ -185,11 +185,11 @@ nomeados exigem correspondencia explicita.
 
 ## Exemplos do Workspace
 
-- [`test1/src/components/SummaryCard.vue`](../test1/src/components/SummaryCard.vue)
-- [`test1/src/components/SimpleDashboard.vue`](../test1/src/components/SimpleDashboard.vue)
-- [`test1/src/components/DynamicComponent.vue`](../test1/src/components/DynamicComponent.vue)
-- [`test1/src/components/AsyncComponentExample.vue`](../test1/src/components/AsyncComponentExample.vue)
-- [`test1/src/components/MonthlyReport.vue`](../test1/src/components/MonthlyReport.vue)
+- [`projeto-1/src/features/examples/components/SummaryCard.vue`](../projeto-1/src/features/examples/components/SummaryCard.vue)
+- [`projeto-1/src/features/examples/components/SimpleDashboard.vue`](../projeto-1/src/features/examples/components/SimpleDashboard.vue)
+- [`projeto-1/src/features/examples/components/DynamicComponentExample.vue`](../projeto-1/src/features/examples/components/DynamicComponentExample.vue)
+- [`projeto-1/src/features/examples/components/AsyncComponentExample.vue`](../projeto-1/src/features/examples/components/AsyncComponentExample.vue)
+- [`projeto-1/src/features/examples/components/MonthlyReport.vue`](../projeto-1/src/features/examples/components/MonthlyReport.vue)
 
 ## Referencias
 

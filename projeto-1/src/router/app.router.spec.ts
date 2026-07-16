@@ -28,6 +28,21 @@ describe('app router', () => {
     expect(router.currentRoute.value.meta.requiresAuth).toBeUndefined()
   })
 
+  it('mantem os exemplos didaticos na arvore publica', async () => {
+    const router = createTestAppRouter()
+
+    await router.push('/examples/reactivity')
+    await router.isReady()
+
+    expect(router.currentRoute.value.name).toBe('examples-reactivity')
+    expect(router.currentRoute.value.meta.requiresAuth).toBeUndefined()
+    expect(router.currentRoute.value.matched.map((route) => route.name)).toEqual([
+      'public',
+      'examples',
+      'examples-reactivity',
+    ])
+  })
+
   it('redireciona visitante ao acessar rota privada de uma feature', async () => {
     const router = createTestAppRouter()
 

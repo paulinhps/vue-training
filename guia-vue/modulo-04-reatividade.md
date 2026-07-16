@@ -145,10 +145,10 @@ privado ao modulo. Exporte apenas se consumidores precisarem nomear o contrato.
 
 ## Exemplos do Workspace
 
-- [`test1/src/components/CartComputedExample.vue`](../test1/src/components/CartComputedExample.vue)
-- [`test1/src/components/WatchExample.vue`](../test1/src/components/WatchExample.vue)
-- [`test1/src/composables/useCepSearch.ts`](../test1/src/composables/useCepSearch.ts)
-- [`test1/src/components/CepSearch.vue`](../test1/src/components/CepSearch.vue)
+- [`projeto-1/src/features/cart/cart.store.ts`](../projeto-1/src/features/cart/cart.store.ts)
+- [`projeto-1/src/features/examples/reactivity/WatchExample.vue`](../projeto-1/src/features/examples/reactivity/WatchExample.vue)
+- [`projeto-1/src/features/examples/reactivity/useCepSearch.ts`](../projeto-1/src/features/examples/reactivity/useCepSearch.ts)
+- [`projeto-1/src/features/examples/reactivity/CepSearch.vue`](../projeto-1/src/features/examples/reactivity/CepSearch.vue)
 - [`projeto-1/src/features/customers/CustomerWorkspaceView.vue`](../projeto-1/src/features/customers/CustomerWorkspaceView.vue)
 
 ## Revisao Rapida

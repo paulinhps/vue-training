@@ -1,54 +1,47 @@
-# projeto-1
+# Projeto 1 - Playground Vue
 
-This template should help get you started developing with Vue 3 in Vite.
+Playground unico do treinamento Vue 3. O projeto reune exemplos isolados dos
+modulos iniciais e fluxos integrados de Router, Pinia, formularios, API fake,
+recursos avancados, arquitetura e testes.
 
-## Recommended IDE Setup
+## Stack
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Vue 3, Composition API e `<script setup>`
+- TypeScript e Vite
+- Vue Router e Pinia
+- VeeValidate e Zod
+- json-server
+- Vitest e Vue Test Utils
 
-## Recommended Browser Setup
+## Execucao
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+```bash
 npm install
+npm run dev:full
 ```
 
-### Compile and Hot-Reload for Development
+O script inicia o Vite e a API fake em paralelo:
 
-```sh
+- aplicacao: `http://localhost:5174`
+- API fake: `http://localhost:3001`
+- exemplos iniciais: `http://localhost:5174/examples`
+
+## Comandos
+
+```bash
 npm run dev
+npm run api
+npm run test:unit -- --run
+npm run type-check
+npm run build-only
 ```
 
-### Type-Check, Compile and Minify for Production
+## Organizacao
 
-```sh
-npm run build
-```
+- `src/features/examples`: exemplos isolados dos modulos iniciais.
+- `src/features`: features e rotas do playground integrado.
+- `src/shared`: UI, HTTP e router genericos.
+- `src/plugins`: infraestrutura instalada globalmente.
+- `db.json`: dados da API fake.
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+O guia associado fica em [`../guia-vue`](../guia-vue/README.md).

@@ -147,9 +147,9 @@ separar pode ser util para arquivos grandes ou estilos compartilhados.
 
 ## Exemplos do Workspace
 
-- [`test1/src/App.vue`](../test1/src/App.vue)
-- [`test1/src/components/Skill.vue`](../test1/src/components/Skill.vue)
-- [`test1/src/components/MyExampleComponent.vue`](../test1/src/components/MyExampleComponent.vue)
+- [`projeto-1/src/App.vue`](../projeto-1/src/App.vue)
+- [`projeto-1/src/features/examples/components/SkillBadge.vue`](../projeto-1/src/features/examples/components/SkillBadge.vue)
+- [`projeto-1/src/features/examples/components/OptionsApiExample.vue`](../projeto-1/src/features/examples/components/OptionsApiExample.vue)
 - [`projeto-1/src/main.ts`](../projeto-1/src/main.ts)
 
 ## Revisao Rapida

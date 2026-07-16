@@ -147,10 +147,10 @@ proxima atualizacao reativa e torna testes mais frageis.
 
 ## Exemplos do Workspace
 
-- [`test1/src/components/SimpleDashboard.vue`](../test1/src/components/SimpleDashboard.vue)
-- [`test1/src/components/Dashboard.vue`](../test1/src/components/Dashboard.vue)
-- [`test1/src/components/LoadingState.vue`](../test1/src/components/LoadingState.vue)
-- [`test1/src/components/ErrorState.vue`](../test1/src/components/ErrorState.vue)
+- [`projeto-1/src/features/examples/components/SimpleDashboard.vue`](../projeto-1/src/features/examples/components/SimpleDashboard.vue)
+- [`projeto-1/src/features/examples/components/SalesDashboard.vue`](../projeto-1/src/features/examples/components/SalesDashboard.vue)
+- [`projeto-1/src/features/examples/components/LoadingState.vue`](../projeto-1/src/features/examples/components/LoadingState.vue)
+- [`projeto-1/src/features/examples/components/ErrorState.vue`](../projeto-1/src/features/examples/components/ErrorState.vue)
 
 ## Revisao Rapida
 

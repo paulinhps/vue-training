@@ -1,7 +1,7 @@
 # Workspace de Treinamento Vue 3
 
-Este repositorio registra um treinamento completo de Vue 3, os playgrounds usados
-nas aulas e a descoberta do **TechEventHub**, projeto final que sera implementado na
+Este repositorio registra um treinamento completo de Vue 3, o playground usado nas
+aulas e a descoberta do **TechEventHub**, projeto final que sera implementado na
 proxima etapa.
 
 O material foi produzido para um desenvolvedor com experiencia em TypeScript,
@@ -25,29 +25,13 @@ armadilhas e praticas profissionais.
 ## Conteudo do Repositorio
 
 - `guia-vue/`: guia complementar dos 14 modulos e SSR/Nuxt.
-- `projeto-1/`: playground principal, com Router, Pinia, formularios, API fake,
-  recursos avancados, arquitetura e testes.
-- `test1/`: primeiro playground, com fundamentos, componentes, reatividade e
-  provide/inject.
+- `projeto-1/`: playground unico, com exemplos dos fundamentos aos testes.
 - documentos de produto na raiz: estado atual da descoberta do TechEventHub.
 
 A aplicacao final ainda nao foi criada. Seu diretorio sera definido na etapa de
 configuracao inicial.
 
-## Organizacao do Workspace
-
-- `guia-vue/`: material de consulta produzido durante o treinamento.
-- `projeto-1/`: playground principal e fonte dos exemplos mais avancados.
-- `test1/`: primeiro playground, com fundamentos, componentes e reatividade.
-- arquivos `PRODUCT.md`, `DOMAIN.md` e relacionados: descoberta do TechEventHub.
-
-## Executando os Playgrounds
-
-```bash
-cd test1
-npm install
-npm run dev
-```
+## Executando o Playground
 
 ```bash
 cd projeto-1
@@ -56,4 +40,4 @@ npm run dev:full
 ```
 
 No `projeto-1`, o Vite e o `json-server` sao iniciados em paralelo pelo script
-`dev:full`.
+`dev:full`. Os exemplos dos modulos iniciais ficam disponiveis em `/examples`.

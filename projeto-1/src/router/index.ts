@@ -5,6 +5,7 @@ import { adminRoutes } from '@/features/admin/admin.routes'
 import { authRoutes } from '@/features/auth/auth.routes'
 import { cartRoutes } from '@/features/cart/cart.routes'
 import { customerRoutes } from '@/features/customers/customer.routes'
+import { exampleRoutes } from '@/features/examples/examples.routes'
 import { onboardingRoutes } from '@/features/onboarding/onboarding.routes'
 import { productRoutes } from '@/features/products/product.routes'
 import { settingRoutes } from '@/features/settings/setting.routes'
@@ -27,6 +28,7 @@ export function createAppRouter(
             name: 'root',
             component: () => import('@/views/HomeView.vue'),
           },
+          ...exampleRoutes,
           ...authRoutes,
         ],
       },

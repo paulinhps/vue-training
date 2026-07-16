@@ -52,7 +52,7 @@ VeeValidate, Zod, MSW, Vitest e Vue Test Utils.
 
 ## Regra de Edicao Importante
 
-- `projeto-1/` e o playground para exemplos didaticos.
+- `projeto-1/` e o unico playground e fonte de exemplos didaticos.
 - Nao modificar o projeto final para demonstrar um conceito isolado.
 - Modificar o projeto final apenas durante uma etapa explicitamente iniciada.
 - Quando o aluno pedir para "corrigir", revisar e explicar sem editar arquivos.

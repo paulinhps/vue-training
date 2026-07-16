@@ -125,10 +125,10 @@ event bus global sem contrato. Prefira:
 
 ## Exemplos do Workspace
 
-- [`test1/src/contexts/themeContext.ts`](../test1/src/contexts/themeContext.ts)
-- [`test1/src/components/ThemeProvider.vue`](../test1/src/components/ThemeProvider.vue)
-- [`test1/src/components/ThemeSwitcher.vue`](../test1/src/components/ThemeSwitcher.vue)
-- [`test1/src/components/ThemeSettingsPanel.vue`](../test1/src/components/ThemeSettingsPanel.vue)
+- [`projeto-1/src/features/examples/context/themeContext.ts`](../projeto-1/src/features/examples/context/themeContext.ts)
+- [`projeto-1/src/features/examples/context/ThemeProvider.vue`](../projeto-1/src/features/examples/context/ThemeProvider.vue)
+- [`projeto-1/src/features/examples/context/ThemeSwitcher.vue`](../projeto-1/src/features/examples/context/ThemeSwitcher.vue)
+- [`projeto-1/src/features/examples/context/ThemeSettingsPanel.vue`](../projeto-1/src/features/examples/context/ThemeSettingsPanel.vue)
 - [`projeto-1/src/contexts/breadcrumbContext.ts`](../projeto-1/src/contexts/breadcrumbContext.ts)
 
 ## Revisao Rapida
