@@ -5,8 +5,6 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "api": "json-server db.json --port 3001",
-    "dev:full": "run-p dev api",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "test:unit": "vitest",
@@ -40,7 +38,7 @@
     "eslint-plugin-vue": "~10.9.2",
     "jiti": "^2.7.0",
     "jsdom": "^29.1.1",
-    "json-server": "^1.0.0-beta.15",
+    "msw": "^2.15.0",
     "npm-run-all2": "^9.0.2",
     "oxlint": "~1.69.0",
     "prettier": "3.8.4",
@@ -53,5 +51,10 @@
   },
   "engines": {
     "node": "^22.18.0 || >=24.12.0"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }

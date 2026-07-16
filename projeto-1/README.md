@@ -10,27 +10,30 @@ recursos avancados, arquitetura e testes.
 - TypeScript e Vite
 - Vue Router e Pinia
 - VeeValidate e Zod
-- json-server
+- MSW com persistencia em localStorage
 - Vitest e Vue Test Utils
 
 ## Execucao
 
 ```bash
 npm install
-npm run dev:full
+npm run dev
 ```
 
-O script inicia o Vite e a API fake em paralelo:
+O Vite inicia a aplicacao e o MSW intercepta as requisicoes da API no navegador:
 
 - aplicacao: `http://localhost:5174`
-- API fake: `http://localhost:3001`
 - exemplos iniciais: `http://localhost:5174/examples`
+
+O arquivo `db.json` fornece o seed inicial. Na primeira execucao, o banco simulado
+e salvo no localStorage com a chave `projeto-1:mock-database:v1`. As operacoes de
+criacao, edicao e exclusao atualizam essa copia persistida. Para restaurar o seed,
+remova essa chave no DevTools e recarregue a pagina.
 
 ## Comandos
 
 ```bash
 npm run dev
-npm run api
 npm run test:unit -- --run
 npm run type-check
 npm run build-only
@@ -42,6 +45,7 @@ npm run build-only
 - `src/features`: features e rotas do playground integrado.
 - `src/shared`: UI, HTTP e router genericos.
 - `src/plugins`: infraestrutura instalada globalmente.
-- `db.json`: dados da API fake.
+- `db.json`: seed da API fake.
+- `src/mocks`: handlers do MSW e persistencia do banco simulado.
 
 O guia associado fica em [`../guia-vue`](../guia-vue/README.md).

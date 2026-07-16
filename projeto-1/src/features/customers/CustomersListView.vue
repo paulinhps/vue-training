@@ -28,7 +28,7 @@ function formatCurrency(value: number): string {
     <header class="customers-header">
       <div>
         <h1>Clientes</h1>
-        <p>Dados carregados do json-server.</p>
+        <p>Dados carregados da API simulada pelo MSW.</p>
       </div>
 
       <div class="customers-actions">

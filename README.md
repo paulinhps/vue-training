@@ -15,6 +15,8 @@ armadilhas e praticas profissionais.
 - [PRODUCT.md](./PRODUCT.md): visao do produto, personas, escopo e modelo inicial.
 - [ROADMAP.md](./ROADMAP.md): etapas de implementacao e estado atual.
 - [DECISIONS.md](./DECISIONS.md): decisoes de produto e arquitetura ja tomadas.
+- [ARCHITECTURE.md](./ARCHITECTURE.md): estrutura inicial do frontend,
+  responsabilidades dos diretorios e regras de crescimento.
 - [USE_CASES.md](./USE_CASES.md): casos de uso e criterios de aceite.
 - [NAVIGATION.md](./NAVIGATION.md): layouts, rotas e regras de acesso.
 - [DOMAIN.md](./DOMAIN.md): entidades, relacionamentos e regras de negocio.

@@ -73,7 +73,7 @@ async function submitForm(): Promise<void> {
   errorMessage.value = ''
 
   try {
-    const response = await fetch('http://localhost:3001/customers', {
+    const response = await fetch('/api/customers', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

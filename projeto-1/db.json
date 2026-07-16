@@ -123,6 +123,5 @@
       "ibge": "3106200",
       "ddd": "31"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }

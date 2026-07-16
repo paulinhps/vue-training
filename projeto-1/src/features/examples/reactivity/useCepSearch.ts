@@ -82,7 +82,7 @@ export function useCepSearch(): UseCepSearchReturn {
     searchedCep.value = paddedCep
 
     try {
-      const response = await fetch(`http://localhost:3001/addresses/${paddedCep}`, {
+      const response = await fetch(`/api/addresses/${paddedCep}`, {
         signal,
       })
 

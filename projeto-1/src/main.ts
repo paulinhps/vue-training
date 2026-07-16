@@ -9,14 +9,24 @@ import { cpfDirective } from './directives/cpf'
 import { digitsOnlyDirective } from './directives/digitsOnly'
 import { loggerPlugin } from './plugins/logger/logger.plugin'
 
-const app = createApp(App)
+async function startApplication(): Promise<void> {
+  const { worker } = await import('./mocks/browser')
 
-app.use(createPinia())
-app.use(router)
-app.use(loggerPlugin, {
-  prefix: 'projeto-1',
-})
-app.directive('cpf', cpfDirective)
-app.directive('digits-only', digitsOnlyDirective)
+  await worker.start({
+    onUnhandledRequest: 'bypass',
+  })
 
-app.mount('#app')
+  const app = createApp(App)
+
+  app.use(createPinia())
+  app.use(router)
+  app.use(loggerPlugin, {
+    prefix: 'projeto-1',
+  })
+  app.directive('cpf', cpfDirective)
+  app.directive('digits-only', digitsOnlyDirective)
+
+  app.mount('#app')
+}
+
+void startApplication()

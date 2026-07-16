@@ -2,7 +2,7 @@ import type { Customer } from './customer.types'
 import type { CustomerCreateInput } from './customer.schema'
 import { withRetry } from '@/shared/http/withRetry'
 
-const baseUrl = 'http://localhost:3001/customers'
+const baseUrl = '/api/customers'
 
 export async function listCustomers(signal?: AbortSignal): Promise<Customer[]> {
   return withRetry(async () => {
