@@ -50,6 +50,35 @@ src/
 Essa arvore representa o destino esperado da organizacao, nao uma lista de pastas
 que precisam ser criadas antecipadamente.
 
+Na implementacao atual, `src/layouts/` e `src/router/` permanecem diretamente sob
+`src/`. Eles poderao ser movidos para `app/` apenas se essa camada adicional passar
+a melhorar a leitura da composicao global.
+
+## Composicao de Layouts
+
+`MainLayout` e o shell visual compartilhado. Ele define a grid da viewport, as
+regioes semanticas, a rolagem e a aparencia global de header, aside, main e footer.
+O aside e opcional; quando ausente, sua coluna nao existe e o main ocupa toda a
+largura disponivel.
+
+Layouts de area, como `PublicLayout` e o futuro layout de gestao, compoem o
+`MainLayout` por slots. Eles fornecem o conteudo concreto das regioes e o container
+apropriado para as paginas, sem duplicar a geometria e os estilos globais do shell.
+
+Padding, largura maxima e outras necessidades do conteudo pertencem ao layout da
+area ou a pagina. O `MainLayout` nao deve impor espacamento interno ao conteudo das
+features.
+
+## Composicao de Rotas
+
+Rotas sao declaradas proximas da feature responsavel e podem ser separadas por
+contexto, por exemplo rotas publicas e rotas de gestao de eventos. O roteador
+principal encaixa esses conjuntos como filhos das rotas de area.
+
+As rotas pai sao responsaveis pelo layout, prefixo e metadados comuns de acesso.
+As features continuam responsaveis por caminhos relativos, paginas e metadados
+especificos. Uma feature pode participar de mais de uma area.
+
 ## Responsabilidade dos Diretorios
 
 ### `app/`
@@ -121,6 +150,10 @@ Configuracao, handlers e dados demonstrativos do MSW. O restante da aplicacao na
 deve importar handlers ou dados mockados diretamente; deve acessar a API por meio
 dos services HTTP.
 
+A infraestrutura do MSW e configurada uma unica vez. Handlers nao precisam ser
+antecipados: devem ser adicionados incrementalmente quando uma feature definir um
+contrato HTTP necessario para seu fluxo.
+
 ### `utils/`
 
 Funcoes puras e genericas reutilizadas por partes diferentes da aplicacao. Funcoes
@@ -149,4 +182,3 @@ page/component -> composable ou store -> service de feature
 
 As dependencias nao devem seguir o caminho inverso. Em especial, a camada de
 dominio nao deve depender de paginas, layouts ou detalhes dos mocks.
-

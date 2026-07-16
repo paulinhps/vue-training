@@ -3,13 +3,16 @@
 ## Estrutura Confirmada
 
 ```text
+Entry
+`-- /                                  redirect por sessao e perfil
+
 PublicLayout
-|-- /
 |-- /events
 |-- /events/:slug
 `-- /login
 
 AccountLayout                         requiresAuth
+|-- /my
 |-- /my/favorites
 |-- /my/schedule
 `-- /my/registrations
@@ -30,7 +33,6 @@ Global
 
 | Caminho | Pagina | Responsabilidade |
 | --- | --- | --- |
-| `/` | Home | Apresentar eventos em destaque e proximos eventos |
 | `/events` | Catalogo | Buscar, filtrar e ordenar eventos publicados |
 | `/events/:slug` | Detalhes | Apresentar informacoes, sessoes e palestrantes |
 | `/login` | Login | Autenticar com formulario ou conta demonstrativa |
@@ -41,6 +43,7 @@ Todas exigem autenticacao.
 
 | Caminho | Pagina | Responsabilidade |
 | --- | --- | --- |
+| `/my` | Inicio da conta | Apresentar o ponto de entrada do participante |
 | `/my/favorites` | Favoritos | Consultar e remover eventos favoritos |
 | `/my/schedule` | Agenda | Consultar a agenda pessoal |
 | `/my/registrations` | Inscricoes | Consultar e cancelar inscricoes simuladas |
@@ -68,6 +71,11 @@ Todas exigem autenticacao e perfil de organizador ou administrador.
 
 ## Comportamentos de Navegacao
 
+- `/` funciona como rota de entrada e redireciona de acordo com a sessao e o
+  perfil: visitante para `/events`, participante para `/my` e perfil de gestao
+  para `/management`.
+- As rotas publicas, incluindo `/events`, permanecem acessiveis para usuarios
+  autenticados.
 - Uma rota autenticada sem sessao redireciona para `/login` e preserva o destino.
 - Uma rota sem permissao redireciona para `/forbidden`.
 - Login iniciado por um favorito tambem preserva a intencao de negocio.
@@ -84,3 +92,8 @@ todas as filhas.
 
 O formato final dos metadados sera definido durante a implementacao, mas deve ser
 tipado por extensao de `RouteMeta`.
+
+Cada feature declara os conjuntos de rotas que lhe pertencem. O roteador principal
+compoe esses conjuntos sob as rotas pai das areas, que definem layout, prefixo e
+politica de acesso. Assim, a feature de eventos pode fornecer rotas publicas e de
+gestao sem pertencer exclusivamente a uma dessas areas.

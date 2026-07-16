@@ -51,7 +51,7 @@ Deseja acompanhar indicadores e administrar os dados gerais da plataforma.
 
 ### Area Publica
 
-- Pagina inicial.
+- Entrada dinamica em `/`, com `/events` como destino de visitantes.
 - Catalogo de eventos.
 - Busca, filtros e ordenacao.
 - Detalhes de evento por rota dinamica.

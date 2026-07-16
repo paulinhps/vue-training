@@ -5,7 +5,9 @@ producao executavel sem backend externo.
 
 ## Experiencia Publica
 
-- Visitantes acessam home, catalogo e detalhes sem autenticacao.
+- `/` encaminha visitantes para o catalogo e perfis autenticados para a area
+  inicial correspondente.
+- Visitantes acessam catalogo e detalhes sem autenticacao.
 - Busca, filtros e ordenacao do catalogo funcionam e sao refletidos na URL.
 - Detalhes apresentam dados, sessoes, palestrantes e disponibilidade do evento.
 - Eventos inexistentes, cancelados e encerrados possuem experiencias adequadas.

@@ -1,8 +1,8 @@
 # Workspace de Treinamento Vue 3
 
 Este repositorio registra um treinamento completo de Vue 3, o playground usado nas
-aulas e a descoberta do **TechEventHub**, projeto final que sera implementado na
-proxima etapa.
+aulas e o desenvolvimento do **TechEventHub**, projeto final atualmente em
+implementacao.
 
 O material foi produzido para um desenvolvedor com experiencia em TypeScript,
 React, Angular e .NET. O guia enfatiza modelo mental, diferencas entre frameworks,
@@ -28,10 +28,19 @@ armadilhas e praticas profissionais.
 
 - `guia-vue/`: guia complementar dos 14 modulos e SSR/Nuxt.
 - `projeto-1/`: playground unico, com exemplos dos fundamentos aos testes.
+- `tech-event-hub/`: aplicacao final Vue do TechEventHub.
 - documentos de produto na raiz: estado atual da descoberta do TechEventHub.
 
-A aplicacao final ainda nao foi criada. Seu diretorio sera definido na etapa de
-configuracao inicial.
+## Executando o TechEventHub
+
+```bash
+cd tech-event-hub
+npm install
+npm run dev
+```
+
+O estado detalhado da implementacao e as proximas entregas estao em
+[`ROADMAP.md`](./ROADMAP.md).
 
 ## Executando o Playground
 

@@ -17,6 +17,14 @@ O mapa de navegacao foi confirmado com tres areas: publica, conta autenticada e
 gestao em `/management`. Organizador e administrador compartilham o layout de
 gestao, com dados e operacoes limitados pelo perfil.
 
+`/` sera uma rota de entrada dinamica: visitante segue para `/events`, participante
+para `/my` e perfis de gestao para `/management`. Nao existe uma Home publica
+separada no MVP enquanto nao houver conteudo proprio que a justifique.
+
+O shell compartilhado e o `MainLayout`, responsavel pela grid responsiva e pelas
+regioes semanticas. Layouts de area o compoem por slots. Rotas sao declaradas por
+feature e encaixadas pelo roteador principal sob as respectivas areas.
+
 Favorito, inscricao e agenda sao estados distintos. A agenda contem sessoes e exige
 inscricao ativa no evento. Cancelar uma inscricao remove as sessoes relacionadas da
 agenda depois de confirmacao, mas nao remove o favorito.
@@ -79,5 +87,12 @@ VeeValidate, Zod, MSW, Vitest e Vue Test Utils.
 
 ## Estado Atual e Proxima Acao
 
-A descoberta inicial do produto foi concluida. A proxima etapa e iniciar a fundacao
-tecnica do projeto final em um diretorio proprio, sem modificar `projeto-1`.
+A descoberta e a fundacao tecnica inicial foram concluidas. A aplicacao final esta
+em `tech-event-hub/`, com Vite, TypeScript, Vue Router, Pinia, Vitest, ESLint,
+Tailwind CSS, `MainLayout`, `PublicLayout` e a rota provisoria `/events`.
+
+A infraestrutura do MSW ja existe. Seus handlers serao criados por demanda, junto
+aos contratos HTTP exigidos por cada feature.
+
+A proxima etapa e definir o contrato e os dados demonstrativos de eventos e
+implementar o catalogo publico com busca, filtros, ordenacao e estados de tela.

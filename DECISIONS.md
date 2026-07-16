@@ -172,3 +172,72 @@ nao deve antecipar abstracoes exclusivas de Nuxt.
 
 **Consequencia:** o projeto final so pode ser alterado quando uma etapa dele for
 explicitamente iniciada ou solicitada.
+
+## 2026-07-16 - Shell Compartilhado e Layouts por Area
+
+**Decisao:** `MainLayout` sera o shell compartilhado das areas da aplicacao. Ele
+define a grid responsiva, as regioes semanticas e sua aparencia global. Layouts de
+area fornecem o conteudo concreto por slots.
+
+**Motivo:** header, aside, main e footer obedecem as mesmas regras estruturais e
+visuais. Centraliza-las evita repeticao entre as areas sem acoplar o shell ao
+conteudo de uma navegacao especifica.
+
+**Consequencia:** o aside e opcional e sua ausencia remove tambem a coluna
+reservada. Espacamento e largura do conteudo nao pertencem ao shell; ficam no
+layout de area ou na pagina. `PublicLayout` usa o shell sem aside e o futuro layout
+de gestao o usara com aside.
+
+## 2026-07-16 - Rotas Declaradas por Feature e Compostas por Area
+
+**Decisao:** features declaram suas rotas, podendo exportar conjuntos diferentes
+por contexto. O roteador principal compoe esses conjuntos sob as rotas pai das
+areas.
+
+**Motivo:** eventos possuem paginas publicas e administrativas. Organizar tudo
+apenas por area fragmentaria a feature, enquanto colocar layout e autorizacao
+apenas na feature duplicaria regras estruturais.
+
+**Consequencia:** areas controlam layout, prefixo e acesso comum; features
+controlam caminhos relativos, paginas e regras especificas. A feature de eventos
+pode participar simultaneamente das areas publica e de gestao.
+
+## 2026-07-16 - Raiz como Entrada Dinamica
+
+**Decisao:** `/` sera uma rota de entrada, e nao uma Home publica obrigatoria no
+MVP. Ela encaminhara visitantes para `/events`, participantes para `/my` e perfis
+de gestao para `/management`.
+
+**Motivo:** ainda nao existe uma necessidade de produto que justifique uma pagina
+publica separada do catalogo. O redirecionamento oferece um destino inicial
+coerente para cada perfil sem criar conteudo artificial.
+
+**Consequencia:** `/events` permanece uma rota publica e estavel para todos os
+perfis. A entrada dinamica sera concluida depois da implementacao da sessao e dos
+destinos autenticados. Uma Home publica podera ser adicionada futuramente se
+surgir conteudo proprio, como destaques ou apresentacao do produto.
+
+## 2026-07-16 - Tema Persistido Adiado
+
+**Decisao:** a infraestrutura de `ThemeProvider` nao fara parte da fundacao
+inicial. Os tokens e variantes visuais podem ser preparados, mas a troca e a
+persistencia de tema serao implementadas na fase de qualidade.
+
+**Motivo:** o tema nao e necessario para validar o shell, as rotas e o primeiro
+fluxo publico.
+
+**Consequencia:** a remocao temporaria do provider reduz a fundacao atual sem
+retirar dark mode do escopo final do MVP.
+
+## 2026-07-16 - Handlers do MSW Criados por Demanda
+
+**Decisao:** a infraestrutura do MSW permanece configurada desde a fundacao, mas
+handlers e dados mockados serao criados apenas quando uma feature precisar de um
+contrato de backend.
+
+**Motivo:** antecipar endpoints antes dos fluxos e contratos estarem claros pode
+gerar rotas artificiais e retrabalho.
+
+**Consequencia:** a ausencia inicial de handlers nao representa configuracao
+incompleta. Cada feature adiciona os endpoints de que necessita, mantendo os
+componentes desacoplados dos mocks por meio de services HTTP.

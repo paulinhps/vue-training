@@ -2,7 +2,7 @@
 
 ## Estado Atual
 
-Fase atual: **fundacao tecnica aguardando inicio explicito**.
+Fase atual: **fundacao tecnica concluida e experiencia publica iniciada**.
 
 Concluido:
 
@@ -12,12 +12,18 @@ Concluido:
 - Escopo inicial e limites registrados.
 - Favoritos definidos como funcionalidade autenticada.
 - Casos de uso, navegacao, dominio e criterios do MVP definidos.
+- Projeto Vue criado em `tech-event-hub` com TypeScript, Vite, Router e Pinia.
+- Ferramentas de teste, lint e formatacao configuradas.
+- Tailwind CSS e aliases iniciais configurados.
+- `MainLayout` responsivo e `PublicLayout` inicial implementados.
+- Arvore inicial de rotas publicas criada com carregamento sob demanda.
+- Pagina provisoria do catalogo conectada em `/events`.
 
 Proximo passo:
 
-- Definir o diretorio da aplicacao final.
-- Criar o projeto Vue com Vite e TypeScript.
-- Configurar a fundacao tecnica e a estrutura inicial.
+- Definir o contrato e os dados demonstrativos de eventos.
+- Criar os primeiros handlers do MSW junto aos endpoints exigidos pelo catalogo.
+- Implementar o catalogo publico e seus estados de tela.
 
 ## Fases
 
@@ -33,18 +39,23 @@ Proximo passo:
 
 ### 2. Fundacao Tecnica
 
-- [ ] Criar o projeto Vue com Vite e TypeScript.
-- [ ] Configurar Vue Router e Pinia.
-- [ ] Configurar Vitest e Vue Test Utils.
-- [ ] Configurar ESLint e formatacao.
-- [ ] Definir aliases e estrutura de pastas.
-- [ ] Configurar MSW.
-- [ ] Criar app shell e layouts iniciais.
+- [x] Criar o projeto Vue com Vite e TypeScript.
+- [x] Configurar Vue Router e Pinia.
+- [x] Configurar Vitest e Vue Test Utils.
+- [x] Configurar ESLint e formatacao.
+- [x] Definir aliases e estrutura inicial de pastas.
+- [x] Configurar a infraestrutura do MSW.
+- [x] Criar o `MainLayout` responsivo.
+- [x] Criar o `PublicLayout` inicial.
+- [x] Configurar Tailwind CSS e estilos globais iniciais.
 
 ### 3. Experiencia Publica
 
-- [ ] Implementar pagina inicial.
+- [x] Criar a arvore inicial de rotas publicas.
+- [x] Conectar a pagina provisoria de eventos em `/events`.
+- [ ] Implementar `/` como entrada dinamica por sessao e perfil.
 - [ ] Implementar catalogo de eventos.
+- [ ] Criar handlers do MSW conforme os endpoints exigidos pela feature.
 - [ ] Implementar busca, filtros e ordenacao.
 - [ ] Implementar detalhes do evento.
 - [ ] Tratar loading, erro e estados vazios.
@@ -53,7 +64,7 @@ Proximo passo:
 ### 4. Autenticacao e Participante
 
 - [ ] Implementar login e logout simulados.
-- [ ] Separar rotas publicas e autenticadas.
+- [ ] Criar a arvore de rotas autenticadas em `/my`.
 - [ ] Implementar guards e redirect pos-login.
 - [ ] Implementar favoritos autenticados.
 - [ ] Implementar agenda pessoal.
@@ -61,7 +72,7 @@ Proximo passo:
 
 ### 5. Administracao
 
-- [ ] Criar layout administrativo.
+- [ ] Criar layout de gestao com `MainLayout` e sidebar.
 - [ ] Implementar dashboard.
 - [ ] Implementar CRUD de eventos.
 - [ ] Implementar gestao de palestrantes.
